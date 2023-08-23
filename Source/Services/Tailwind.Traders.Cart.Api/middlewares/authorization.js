@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
     const BEARER = 'Bearer ';
     let token = req.headers['x-access-token'] || req.headers['authorization'];
 
-    if (token && token.startsWith(BEARER)) {
+    if ( token?.startsWith(BEARER)) {
         // Remove Bearer from string
         token = token.slice(7, token.length);
     }
